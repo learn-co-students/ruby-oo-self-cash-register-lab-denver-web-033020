@@ -12,6 +12,7 @@ require "pry"
     # discount (set a default value of 0 as this is optional,it also goes into the parenthesis)
     # items_scanned (empty array to add scanned items to)
     #attr_accessor (We also want to list all variables used to have setter and getter method applied)
+
 class CashRegister
     attr_accessor :total, :discount, :price, :items_scanned, :last_item_scanned
     def initialize (discount =0)
@@ -27,6 +28,7 @@ class CashRegister
 # for as many number there are items
 # shovel item_name into the array. We do this because there is another method that asks for this
 # declare that the price of item just scanned is its price and quantity. this will come in handy for method that is coming up
+# notice that .last_item_scanned is included in attr_accessor meaning last_item_scanned has already been set and can be get.     
     def add_item(item_name, price, quantity=1)
         self.total += price * quantity
             quantity.times do
